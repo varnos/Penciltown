@@ -14,9 +14,12 @@ import { ActionButtonBarComponent } from './game/action-area/action-button-bar/a
 import { DieRollerComponent } from './game/action-area/die-roller/die-roller.component';
 import { GameHeaderBarComponent } from './game/action-area/game-header-bar/game-header-bar.component';
 import { NotificationComponent } from './common/notification/notification.component';
+import { GameBoardComponent } from './game/game-board.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
+    GameBoardComponent,
     AppComponent,
     GameMapComponent,
     MapTileComponent,
@@ -32,6 +35,7 @@ import { NotificationComponent } from './common/notification/notification.compon
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

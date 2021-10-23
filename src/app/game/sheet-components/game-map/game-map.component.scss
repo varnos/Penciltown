@@ -1,0 +1,11 @@
+.game-board{
+    display: flex;
+    flex-direction: column;
+    &__row{
+        display:flex;
+        width:auto
+    }
+    &__cell{
+
+    }
+}

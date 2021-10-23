@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { TileType } from './tile-types';
 
 @Component({
   selector: 'app-map-tile',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapTileComponent implements OnInit {
 
+  @Input() public tileType!: TileType;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get imagePath(): string {
+    return 'assets/tile-graphics/'+this.tileType+'.png';
   }
 
 }

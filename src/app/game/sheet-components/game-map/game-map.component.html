@@ -1,1 +1,8 @@
-<p>game-map works!</p>
+<div class="game-board">
+<tr class="game-board__row" *ngFor="let row of matrix | async">
+    <td class="game-board__cell" *ngFor="let column of row">
+        <app-map-tile
+        [tileType]=column></app-map-tile>
+    </td>
+</tr>
+</div>
