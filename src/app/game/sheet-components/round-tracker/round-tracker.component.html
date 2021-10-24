@@ -1,8 +1,8 @@
-<div class=round-tracker__container>
+<div class="round-tracker__container">
     <div class=round-tracker__map-label>
         Peaceful Meadow
     </div>
-    <div class=round-tracker__round-rows>
+    <div class="round-tracker__round-rows sketch-border">
         <div class="round-row round-row--top">
             <div class="round-cell" *ngFor="let round of rounds | slice:0:33">
                 <img *ngIf="round === currentRound" class="current-value-circle" src="assets/UI/circle.png">
@@ -20,8 +20,8 @@
             </div>
         </div>
     </div>
-    <div class=round-tracker__final-round-container>
-        <div class=round-cell>
+    <div class="round-tracker__final-round-container">
+        <div class="round-cell sketch-border">
             100
         </div>
     </div>
