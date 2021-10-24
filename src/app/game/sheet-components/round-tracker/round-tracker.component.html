@@ -1,1 +1,28 @@
-<p>round-tracker works!</p>
+<div class=round-tracker__container>
+    <div class=round-tracker__map-label>
+        Peaceful Meadow
+    </div>
+    <div class=round-tracker__round-rows>
+        <div class="round-row round-row--top">
+            <div class="round-cell" *ngFor="let round of rounds | slice:0:33">
+                <img *ngIf="round === currentRound" class="current-value-circle" src="assets/UI/circle.png">
+                {{round}}
+            </div>
+        </div>
+        <div class="round-row round-row--middle">
+            <div class="round-cell" *ngFor="let round of rounds | slice:33:66">
+                {{round}}
+            </div>
+        </div>
+        <div class="round-row round-row--bottom">
+            <div class="round-cell" *ngFor="let round of rounds | slice:66">
+                {{round}}
+            </div>
+        </div>
+    </div>
+    <div class=round-tracker__final-round-container>
+        <div class=round-cell>
+            100
+        </div>
+    </div>
+</div>

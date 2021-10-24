@@ -1,7 +1,8 @@
-<div class="reputation-tracker--container">
+<div class="reputation-tracker__container">
     <div class="rep-row rep-row--top">
         <div class="rep-cell" [ngClass]="{'rep-cell--rep-line': hasTransitionBorderRight(rep)}"
             *ngFor="let rep of repValues | slice:0:39">
+            <img *ngIf="rep === currentRep" class="current-value-circle" src="assets/UI/circle.png">
             {{rep}}
         </div>
     </div>

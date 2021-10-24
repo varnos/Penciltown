@@ -6,10 +6,20 @@
         text-align: center;
         border-radius: px;
         width: 100%;
+        border-right:rgb(150, 141, 145) 1px solid;
+        position:relative;
         &--rep-line{
             border-right: black 2px solid;
             box-shadow: 2px 0px 5px -3px #616161;
         }
+        img{
+            position:absolute;
+            width:75%;
+            height:150%;
+            top:-0.25rem;
+            left:0.25rem;
+        }
+
     }
     &--bottom{
         border-top: rgb(150, 141, 145) 1px solid;
@@ -17,7 +27,7 @@
 }
 
 .reputation-tracker{
-    &--container{
+    &__container{
         border: rgb(150, 141, 145) 1px solid;
         border-top-left-radius: 255px 15px;
       border-top-right-radius: 15px 225px;

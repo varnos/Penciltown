@@ -1,0 +1,53 @@
+.round-tracker {
+    &__container {
+        display:flex;
+        color:grey;
+    }
+    &__round-rows {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        border: grey 1px solid;
+        .round-row {
+            display: flex;
+            width: 100%;
+                
+            .round-cell {
+                width: 100%;
+                text-align: center;
+                border: grey 1px solid;
+                border-radius: 2px;
+                position:relative;
+                img{
+                    position:absolute;
+                    width:75%;
+                    height:150%;
+                    top:-0.25rem;
+                    left:0.25rem;
+                }
+            }
+        }
+    }
+    &__map-label{
+        font-size: small;
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-right: 1rem;
+    }
+
+    &__final-round-container{
+        width: 15%;
+        display: flex;
+        align-items: center;
+        .round-cell {
+            width: min-content;
+            padding: 0.25rem;
+            text-align: center;
+            border: grey 2px solid;
+            border-radius: 2px;
+            margin:auto;
+        }
+    }
+}

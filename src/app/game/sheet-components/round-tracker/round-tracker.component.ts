@@ -7,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoundTrackerComponent implements OnInit {
 
-  constructor() { }
+  public rounds: number[];
+  public currentRound = 1;
 
+
+  constructor() { 
+    this.rounds = [];
+    for(let i = 1; i<100; i++){
+      this.rounds.push(i);
+    }
+  }
+
+  
   ngOnInit(): void {
   }
 
