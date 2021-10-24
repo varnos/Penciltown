@@ -1,1 +1,11 @@
-<p>economy-area works!</p>
+<div class="economy__container">
+    <div class="economy__row" *ngFor="let row of balance">
+        <div *ngIf="row.title === 'wood'">+</div>
+        <div class="economy__row--inner" [ngClass]="{'economy__row--border-bottom': borderBottom(row.title)}">
+            <div class="economy__row__gains">{{row.value.gain === 0 ? '' : row.value.gain}}</div>
+            <div class="economy__row__label">{{row.title | slice:0:1 | uppercase}}</div>
+            <div class="economy__row__loss">{{row.value.loss === 0 ? '' : row.value.loss}}</div>
+        </div>
+        <div *ngIf="row.title === 'wood'">-</div>
+    </div>
+</div>

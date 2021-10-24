@@ -1,15 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-@use '~@fontsource/architects-daughter';
+@use "~@fontsource/architects-daughter";
 
-*{
-    font-family: "Architects Daughter";
+* {
+  font-family: "Architects Daughter";
 }
 
-.sketch-border{
-    border: rgb(150, 141, 145) 1px solid;
-    border-top-left-radius: 255px 15px;
+@mixin sketch-border {
+  border: rgb(150, 141, 145) 1px solid;
+  border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
   border-bottom-right-radius: 225px 15px;
-  border-bottom-left-radius:15px 255px;
+  border-bottom-left-radius: 15px 255px;
   box-shadow: 0 0 1px 0 black inset, 0 0 1px 0 black;
+}
+
+.sketch-border {
+  @include sketch-border;
 }

@@ -1,0 +1,22 @@
+.economy {
+    &__row {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2px;
+        &--border-bottom {
+            border-bottom: grey 1px solid;
+            border-bottom-right-radius: 50rem 1rem;
+            border-bottom-left-radius: 50rem 0.5rem;
+        }
+        &--inner {
+            display: inherit;
+            justify-content: inherit;
+            width: 50%;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+}

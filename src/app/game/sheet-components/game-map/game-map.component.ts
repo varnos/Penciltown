@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { determineTileType, TileType } from '../map-tile/tile-types';
+import { determineTileType, TileType } from '../../../common/notification/models/tile-types';
 import { map } from 'rxjs/operators'
 import { Observable } from 'rxjs';
 

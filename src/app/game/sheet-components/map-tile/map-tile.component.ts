@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TileType } from './tile-types';
+import { TileType } from '../../../common/notification/models/tile-types';
 
 @Component({
   selector: 'app-map-tile',
