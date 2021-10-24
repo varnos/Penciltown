@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReputationTrackerComponent implements OnInit {
 
-  constructor() { }
+  public currentRep: number = 0;
+  public repValues: number[];
+
+  constructor() { 
+    this.repValues = this.makeRepValues();
+  }
 
   ngOnInit(): void {
+  }
+
+  public hasTransitionBorderRight(rep: number){
+    return (rep % 3 === 0);
+  }
+
+  private makeRepValues(): number[]{
+    const result = [];  
+    for (let i = -23; i<55; i++){
+        result.push(i);
+      }
+    return result;
   }
 
 }

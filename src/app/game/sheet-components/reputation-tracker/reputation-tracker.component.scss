@@ -1,0 +1,28 @@
+.rep-row{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    .rep-cell{
+        text-align: center;
+        border-radius: px;
+        width: 100%;
+        &--rep-line{
+            border-right: black 2px solid;
+            box-shadow: 2px 0px 5px -3px #616161;
+        }
+    }
+    &--bottom{
+        border-top: rgb(150, 141, 145) 1px solid;
+    }
+}
+
+.reputation-tracker{
+    &--container{
+        border: rgb(150, 141, 145) 1px solid;
+        border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
+      border-bottom-right-radius: 225px 15px;
+      border-bottom-left-radius:15px 255px;
+      box-shadow: 0 0 1px 0 black inset, 0 0 1px 0 black;
+    }
+}

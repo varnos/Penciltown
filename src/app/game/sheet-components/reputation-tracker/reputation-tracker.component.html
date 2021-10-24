@@ -1,1 +1,14 @@
-<p>reputation-tracker works!</p>
+<div class="reputation-tracker--container">
+    <div class="rep-row rep-row--top">
+        <div class="rep-cell" [ngClass]="{'rep-cell--rep-line': hasTransitionBorderRight(rep)}"
+            *ngFor="let rep of repValues | slice:0:39">
+            {{rep}}
+        </div>
+    </div>
+    <div class="rep-row rep-row--bottom">
+        <div class="rep-cell" [ngClass]="{'rep-cell--rep-line': hasTransitionBorderRight(rep)}"
+        *ngFor="let rep of repValues | slice:39">
+            {{rep}}
+        </div>
+    </div>
+</div>
