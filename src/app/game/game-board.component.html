@@ -1,9 +1,15 @@
 <div class="board-area">
+    <div class="game-board__action-sidebar">
+        <app-game-header-bar></app-game-header-bar>
+        <app-action-button-bar (rollDice)=handleDiceRoll($event);></app-action-button-bar>
+        <app-die-roller [diceToRoll]=diceToRoll></app-die-roller>
+    </div>
     <app-reputation-tracker></app-reputation-tracker>
     <app-game-map></app-game-map>
     <app-round-tracker></app-round-tracker>
     <div class="game-board__info-sidebar">
         <app-game-info></app-game-info>
         <app-economy-area></app-economy-area>
+        <app-notes-area></app-notes-area>
     </div>
 </div>

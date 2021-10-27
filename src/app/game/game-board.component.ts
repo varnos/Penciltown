@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Subject } from 'rxjs'
 
 @Component({
   selector: 'app-game-board',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameBoardComponent implements OnInit {
 
+  public diceToRoll: Subject<string> = new Subject<string>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleDiceRoll($event: string): void {
+    this.diceToRoll.next($event);
   }
 
 }

@@ -1,0 +1,37 @@
+@use "../../../../styles.scss" as globals;
+
+.action-button-bar {
+    &__container {
+        padding: 1rem;
+    }
+}
+
+.sketch-button-wrapper {
+    padding-bottom: 0.5rem;
+}
+
+.sketch-button {
+    @include globals.sketch-border;
+    border: black 1px solid;
+    user-select: none;
+    display: flex;
+    transition: margin-top 0.1s;
+    background-image: url("/assets/UI/button_background.png");
+    background-size: 5rem;
+    &:active {
+        margin-top: 4px;
+    }
+    &__topside {
+        @include globals.sketch-border;
+        border-bottom-color: rgb(49, 48, 48);
+        background-color: white;
+        margin-bottom: 4px;
+        text-align: center;
+        width: 100%;
+        padding: 0.5rem;
+        transition: margin-bottom 0.1s;
+        &:active {
+            margin-bottom: 0px;
+        }
+    }
+}

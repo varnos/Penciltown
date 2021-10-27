@@ -1,0 +1,50 @@
+.dice-roller {
+    &__container {
+        margin: 1rem;
+    }
+}
+
+.pip {
+    position: absolute;
+    height: 0.5rem;
+    width: 0.5rem;
+    background: rgb(111, 111, 116);
+    border-radius: 0.25rem;
+    &.pip_1 {
+        left: 0.5rem;
+        top: 0.5rem;
+    }
+    &.pip_2 {
+        left: 0.5rem;
+        top: 1.75rem;
+    }
+    &.pip_3 {
+        left: 0.5rem;
+        bottom: 0.5rem;
+    }
+    &.pip_4 {
+        right: 0.5rem;
+        top: 0.5rem;
+    }
+    &.pip_5 {
+        right: 0.5rem;
+        top: 1.75rem;
+    }
+    &.pip_6 {
+        right: 0.5rem;
+        bottom: 0.5rem;
+    }
+    &.pip_7 {
+        left: 1.75rem;
+        top: 1.75rem;
+    }
+}
+
+.d6 {
+    position: relative;
+    border: black 1px solid;
+    background: rgb(230, 230, 230);
+    border-radius: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+}

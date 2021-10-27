@@ -1,1 +1,11 @@
-<p>action-button-bar works!</p>
+<div class=action-button-bar__container>
+    <div class=sketch-button-wrapper *ngFor="let label of buttonLabels">
+        <ng-container [ngTemplateOutlet]='button' [ngTemplateOutletContext]="{button: label}"></ng-container>
+    </div>
+</div>
+
+<ng-template #button let-button='button'>
+    <div (click)="handleEvent(button)" class=sketch-button>
+        <span class=sketch-button__topside>{{button}}</span>
+    </div>
+</ng-template>
