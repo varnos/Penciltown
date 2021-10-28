@@ -4,8 +4,8 @@
 </div>
 
 <ng-template #dice let-context='context'>
-    <div *ngFor="let diceSet of [1]" class="diceType__container">
-        <div *ngFor="let die of [3]" class=d6>
+    <div *ngFor="let diceSet of context" class="dice-type__container">
+        <div *ngFor="let die of diceSet.rolledValues" class=d6>
             <div *ngIf="die>1" class="pip pip_1"></div>
             <div *ngIf="die>5" class="pip pip_2"></div>
             <div *ngIf="die>3" class="pip pip_3"></div>

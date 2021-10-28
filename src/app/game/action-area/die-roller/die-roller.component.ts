@@ -36,6 +36,7 @@ export class DieRollerComponent implements OnInit, OnDestroy {
     } else {
       const result = dice.map((command: string) => this.parseAndRollDie(command))
       this.rolledDice = result.filter(d => d !== null) as Die[];
+      console.log(this.rolledDice)
     }
 
   }

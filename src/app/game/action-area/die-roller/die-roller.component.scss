@@ -1,50 +1,70 @@
+* {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
 .dice-roller {
     &__container {
-        margin: 1rem;
+        width: calc(100% - 1rem);
+        height: calc(100% - 1rem);
+        padding: 0.5rem;
     }
 }
 
-.pip {
-    position: absolute;
-    height: 0.5rem;
-    width: 0.5rem;
-    background: rgb(111, 111, 116);
-    border-radius: 0.25rem;
-    &.pip_1 {
-        left: 0.5rem;
-        top: 0.5rem;
-    }
-    &.pip_2 {
-        left: 0.5rem;
-        top: 1.75rem;
-    }
-    &.pip_3 {
-        left: 0.5rem;
-        bottom: 0.5rem;
-    }
-    &.pip_4 {
-        right: 0.5rem;
-        top: 0.5rem;
-    }
-    &.pip_5 {
-        right: 0.5rem;
-        top: 1.75rem;
-    }
-    &.pip_6 {
-        right: 0.5rem;
-        bottom: 0.5rem;
-    }
-    &.pip_7 {
-        left: 1.75rem;
-        top: 1.75rem;
+.dice-type {
+    &__container {
+        align-items: center;
+        justify-content: center;
     }
 }
 
 .d6 {
     position: relative;
-    border: black 1px solid;
+    border: rgb(197, 197, 197) 1px solid;
+    box-shadow: 1px 1px 0.5rem 2px rgb(192, 191, 191);
     background: rgb(230, 230, 230);
     border-radius: 0.5rem;
-    width: 4rem;
-    height: 4rem;
+    width: 100%;
+    height: 100%;
+    max-width: 3rem;
+    max-height: 3rem;
+    margin: 0.25rem;
+
+    .pip {
+        position: absolute;
+        height: calc(100% / 8);
+        width: calc(100% / 8);
+        background: rgb(95, 95, 97);
+        border-radius: 1rem;
+        &.pip_1 {
+            left: 15%;
+            top: 15%;
+        }
+        &.pip_2 {
+            left: 15%;
+            top: 45%;
+        }
+        &.pip_3 {
+            left: 15%;
+            bottom: 15%;
+        }
+        &.pip_4 {
+            right: 15%;
+            top: 15%;
+        }
+        &.pip_5 {
+            right: 15%;
+            top: 45%;
+        }
+        &.pip_6 {
+            right: 15%;
+            bottom: 15%;
+        }
+        &.pip_7 {
+            left: 45%;
+            top: 45%;
+        }
+    }
 }
