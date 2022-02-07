@@ -16,6 +16,8 @@ import { GameHeaderBarComponent } from './game/action-area/game-header-bar/game-
 import { NotificationComponent } from './common/notification/notification.component';
 import { GameBoardComponent } from './game/game-board.component';
 import { HttpClientModule } from '@angular/common/http';
+import {cellReducer} from "./common/state/cell.reducer";
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({ cell: cellReducer }),
   ],
   providers: [],
   bootstrap: [AppComponent]

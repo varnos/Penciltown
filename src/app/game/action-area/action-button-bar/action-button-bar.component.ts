@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ActionButtonBarComponent implements OnInit {
 
-  public buttonLabels: string[] = ['Reset', 'Next Phase']
+  public buttonLabels: string[] = ['Test Buildings', 'Roll Dice!']
   //roll dice is called with standard dice syntax in a comma separated list: 1D6-2,2d3+5
   @Output() public rollDice = new EventEmitter<string>();
 
@@ -18,7 +18,14 @@ export class ActionButtonBarComponent implements OnInit {
   }
 
   public handleEvent(argument: string) {
-    this.rollDice.emit('2D6');
+    if (argument === 'Roll Dice!'){
+      this.rollDice.emit('2D6');
+    } else if (argument === 'Test Buildings'){
+      // handle building making
+    } else {
+      console.info('button pressed:', argument);
+    }
   }
+
 
 }

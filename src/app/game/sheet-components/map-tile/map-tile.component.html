@@ -1,3 +1,7 @@
-<div class="image_wrapper">
-<img src={{imagePath}} alt={{tileType}}>
+<div
+  class="image_wrapper"
+  (mouseenter)="handleMouseEnter()"
+  (mouseleave)="handleMouseLeave()"
+  (click)="handleClick()">
+  <img src={{imagePath}} alt={{tileType}}>
 </div>

@@ -1,8 +1,13 @@
 <div class="game-board">
-<tr class="game-board__row" *ngFor="let row of matrix | async">
-    <td class="game-board__cell" *ngFor="let column of row">
-        <app-map-tile
-        [tileType]=column></app-map-tile>
+  <tr class="game-board__row" *ngFor="let row of matrix | async; let y = index">
+    <td class="game-board__cell" *ngFor="let column of row; let x = index">
+      <app-map-tile
+        [coordinates]="{x,y}"
+        [tileType]=column
+        [buildingPlaceholder]="false"
+        (onMouseEnter)="handleCellEnter($event)"
+        (onMouseLeave)="handleCellLeave($event)"
+      (onClick)="handleCellClick($event)"></app-map-tile>
     </td>
-</tr>
+  </tr>
 </div>

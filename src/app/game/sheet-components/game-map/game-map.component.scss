@@ -8,12 +8,5 @@
     &__cell{
         border: lightgrey 1px solid;
         user-select: none;
-        &:hover{
-            background-color: rgb(235, 100, 100);
-            box-sizing: border-box;
-            &:active{
-                background-color: royalblue;
-            }
-        }
     }
 }
